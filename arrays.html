@@ -14,23 +14,23 @@
             " Bruna Torres", " Bruna Velôso", "Cauã", "Daniel", "Davi",];
         alunos.push("Gabriel");
         alunos.push("Henrique");
-        let adicionar = prompt("Você deseja adicionar um nome à lista de alunos? (s/n)");
+        let adicionar = prompt("Você deseja adicionar um nome à lista de alunos? Digite 1 para sim e 2 para não.")
 
-        if (adicionar === "s") {
+        if (adicionar === "2") {
             let pergunta = prompt("Qual nome você deseja adicionar a essa lista?");
             alunos.push(pergunta);
 
-            let resposta = prompt("Deseja adicionar mais um nome? (s/n)");
+            let resposta = prompt("Deseja adicionar mais um nome? Digite 1 para sim e 2 para não.");
 
-            while (resposta === "s") {
+            while (resposta === "1") {
                 let nome = prompt("Digite o nome do aluno:");
                 if (nome) alunos.push(nome);
-                resposta = prompt("Deseja adicionar mais um nome? (s/n)"); F
+                resposta = prompt("Deseja adicionar mais um nome? Digite 1 para sim e 2 para não."); F
             }
         }
 
-        // Exibe a lista de alunos após o fluxo de adição (seja com ou sem nomes)
-        document.write("<h3>Lista de Alunos:</h3>");
+
+        document.write("Lista de Alunos <br>");
         if (alunos.length === 0) {
             document.write("Nenhum nome foi adicionado à lista.");
         } else {
