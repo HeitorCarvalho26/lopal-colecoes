@@ -10,6 +10,7 @@
 <body>
     <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
     <br>
+    <button type="button" onclick="removerAluno()">Remover Aluno</button>
     <output></output>
 
     <script>
@@ -32,7 +33,7 @@
 
             opcaoUsuario = confirm('Deseja Adicionar mais um aluno?');
 
-            while(opcaoUsuario) {
+            while (opcaoUsuario) {
                 adicionarAlunos();
             }
 
@@ -40,22 +41,15 @@
 
         }
 
+        function removerAluno() {
+                alunos.pop();
+                imprimirAlunos();
+            }
+        
+
         imprimirAlunos(); // chama a função só no carregamento da página
 
 
-        let frutas = ['maçã', 'banana'];
-        console.log(frutas);
-
-        frutas.push('manão');
-        console.log(frutas);
-        
-        frutas.pop();
-        console.log(frutas);
-        
-        // Problema 2
-        // Ops! O último nome foi digitado errado, e agora?
-        // Com base na solução anterior, desenvolva uma nova solução que permita remover o último nome digitado na lista de alunos.
-        // Dica: você pode utilizar um novo botão para executar uma nova função.
     </script>
 </body>
 
